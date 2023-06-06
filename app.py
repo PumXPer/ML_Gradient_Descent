@@ -6,7 +6,7 @@ st.title("ML - Gradient Descent")
 st.markdown(':dark[<html><a href="https://colab.research.google.com/drive/17p-VG96yqHvdERCi1SVe_9jnPFt976PP#scrollTo=IEWQqpMh6pDX">Colab</a></html>]')
 
 
-# Create fakedata
+# Create fakedata2
 N = 100
 D = 100
 
