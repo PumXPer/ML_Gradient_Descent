@@ -3,6 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 st.title("ML - Gradient Descent")
+st.markdown(':red[Link Colab]:bit.ly/3oRp4i4')
 
 # Create fakedata
 N = 100
