@@ -3,7 +3,23 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 st.title("ML - Gradient Descent")
-st.markdown('<a href="https://colab.research.google.com/drive/17p-VG96yqHvdERCi1SVe_9jnPFt976PP#scrollTo=IEWQqpMh6pDX">Colab</a>', unsafe_allow_html=True)
+link_style = '''
+    <style>
+    a {
+        color: black;
+        text-decoration: none;
+    }
+    a:hover {
+        color: white;
+        text-decoration: none;
+    }
+    </style>
+'''
+
+link_html = '<a href="https://colab.research.google.com/drive/17p-VG96yqHvdERCi1SVe_9jnPFt976PP#scrollTo=IEWQqpMh6pDX">Colab</a>'
+
+st.markdown(link_style, unsafe_allow_html=True)
+st.markdown(link_html, unsafe_allow_html=True)
 
 
 # Create fakedata2
