@@ -77,7 +77,7 @@ def center_image(image_path):
 # Display the GIF using st.image
 gif_path = "https://cdn.discordapp.com/attachments/1110776884897263636/1113687254888628224/AngryInconsequentialDiplodocus-size_restricted.gif"
 center_image(gif_path)
-st.markdown('เพื่อให้เข้าใจการทำงานของ Gradient Descent ได้ง่ายขึ้น ควรทำความเข้าใจกับ Linear Regression ก่อน ซึ่ง Linear Regression เป็นกระบวนการทำนายโดยสร้างเส้นตรงบนจุดข้อมูล โดยเส้นตรงนี้สร้างจากสมการเส้นตรง y = mx + c โดยที่  c เป็นค่าคงที่ c และ m เป็นค่า weight ที่ Gradient Descent จะค้นหา')
+st.markdown('เพื่อให้เข้าใจการทำงานของ Gradient Descent ได้ง่ายขึ้น ควรทำความเข้าใจกับ Linear Regression ก่อน ซึ่ง Linear Regression เป็นกระบวนการทำนายโดยสร้างเส้นตรงบนจุดข้อมูล โดยเส้นตรงนี้สร้างจากสมการเส้นตรง y = mx + c โดยที่ c เป็นค่าคงที่และ m เป็นค่า weight ที่ Gradient Descent จะค้นหา')
 st.latex(r''' y = mx + c ''')
 
 st.header('Loss function (การหาค่าความชัน)')
