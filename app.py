@@ -36,7 +36,7 @@ y = y + fakenoise
 
 
 # plot data 1
-st.header('Fake data')
+st.header('Random data')
 st.markdown('data from random 200 data X and Y 100 each and calculate')
 st.markdown('ข้อมูลที่มาจากการสุ่มจำนวน 200 ข้อมูล X และ Y อย่างละ 100 แล้วนำมาคำนวณ')
 fig, ax = plt.subplots()
@@ -134,3 +134,5 @@ def train_model(w=-10000, alpha=0.0001,tolerance=0.01):
 if st.button('Train'):
     w_list, loss_list = train_model()
     st.write('ค่า W ที่เหมาะสมที่สุดคือ', str(w_list[-1]))
+    st.write('y = {:.2f}x'.format(w_list[-1]))
+
