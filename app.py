@@ -37,8 +37,7 @@ y = y + fakenoise
 
 # plot data 1
 st.header('Random data')
-st.markdown('data from random 200 data X and Y 100 each and calculate')
-st.markdown('ข้อมูลที่มาจากการสุ่มจำนวน 200 ข้อมูล X และ Y อย่างละ 100 แล้วนำมาคำนวณ')
+st.markdown('ข้อมูลที่มาจากการสุ่มโดยที่ X มีค่าระหว่าง 0 ถึง 100 และ Y มีค่าเท่ากับ 2X โดยมีการสุ่ม noise มาเพิ่มเติมเพื่อให้ข้อมูลมีความสมจริงมากขึ้น')
 fig, ax = plt.subplots()
 ax.scatter(x, y)
 
