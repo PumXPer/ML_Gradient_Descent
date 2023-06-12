@@ -65,19 +65,6 @@ for w in wList:
     mse = Loss_func(w)
     mseList.append(mse)
 
-
-st.header('Loss function (การหาค่าความชัน)')
-st.markdown('Gradient Descent ทำงานโดยการทำ optimization บนค่าความชันและค่าคงที่ของสมการเส้นตรงใน Linear Regression แบบง่ายๆคือการปรับค่า weight ใหม่ให้เหมาะสมให้มากที่สุดเพื่อให้มีค่า error หรือค่าความคลาดเคลื่อนลดลงได้มากที่สุด  สูตร Gradient Descent สำหรับคำนวณค่า weight ใหม่มีดังนี้')
-st.latex(r''' w = w - \alpha \frac{d}{dw} \frac{1}{n} \sum_{i=1}^{n} (h_{i} - y_{i})^{2} ''')
-# st.markdown('เมื่อ w คือค่า weight ที่เราต้องการหา ซึ่งเป็นค่าที่เราจะปรับให้เหมาะสม โดยการลดค่าความคลาดเคลื่อนของโมเดล ซึ่งเราสามารถหาค่าความคลาดเคลื่อน(MSE)ได้จากสมการดังนี้')
-# st.latex(r''' \frac{1}{n} \sum_{i=1}^{n} (h_{i} - y_{i})^{2} ''')
-
-
-fig, ax = plt.subplots()
-ax.scatter(wList, mseList)
-
-st.pyplot(fig)
-
 # plot data 2
 st.header('Gradient descent')
 st.markdown('Gradient Descent เป็นอัลกอริทึมที่ใช้ในการหาค่า weight ที่เหมาะสมให้กับโมเดลของ Machine Learning เพื่อให้มีค่า error หรือค่าความคลาดเคลื่อนลดลงได้มากที่สุด อัลกอริทึมนี้มักถูกนำมาใช้ใน Linear Regression, Logistic Regression, และ Neural Networks ซึ่งเป็นแบบจำลองที่แพร่หลายใน Machine Learning')
@@ -92,6 +79,18 @@ gif_path = "https://cdn.discordapp.com/attachments/1110776884897263636/111368725
 center_image(gif_path)
 st.markdown('เพื่อให้เข้าใจการทำงานของ Gradient Descent ได้ง่ายขึ้น ควรทำความเข้าใจกับ Linear Regression ก่อน ซึ่ง Linear Regression เป็นกระบวนการทำนายโดยสร้างเส้นตรงบนจุดข้อมูล โดยเส้นตรงนี้สร้างจากสมการเส้นตรง y = mx + c โดยที่ c เป็นค่าคงที่และ m เป็นค่า weight ที่ Gradient Descent จะค้นหา')
 st.latex(r''' y = mx + c ''')
+
+st.header('Loss function (การหาค่าความชัน)')
+st.markdown('Gradient Descent ทำงานโดยการทำ optimization บนค่าความชันและค่าคงที่ของสมการเส้นตรงใน Linear Regression แบบง่ายๆคือการปรับค่า weight ใหม่ให้เหมาะสมให้มากที่สุดเพื่อให้มีค่า error หรือค่าความคลาดเคลื่อนลดลงได้มากที่สุด  สูตร Gradient Descent สำหรับคำนวณค่า weight ใหม่มีดังนี้')
+st.latex(r''' w = w - \alpha \frac{d}{dw} \frac{1}{n} \sum_{i=1}^{n} (h_{i} - y_{i})^{2} ''')
+# st.markdown('เมื่อ w คือค่า weight ที่เราต้องการหา ซึ่งเป็นค่าที่เราจะปรับให้เหมาะสม โดยการลดค่าความคลาดเคลื่อนของโมเดล ซึ่งเราสามารถหาค่าความคลาดเคลื่อน(MSE)ได้จากสมการดังนี้')
+# st.latex(r''' \frac{1}{n} \sum_{i=1}^{n} (h_{i} - y_{i})^{2} ''')
+
+
+fig, ax = plt.subplots()
+ax.scatter(wList, mseList)
+
+st.pyplot(fig)
 
 st.header('Training Progress')
 st.markdown('ในการทำงานของ Gradient Descent รอบแรก โดยปกติจะเริ่มด้วยการสุ่มค่า weight และวัดประสิทธิภาพของโมเดลที่ได้จากค่า weight ด้วยค่าความคลาดเคลื่อนจากฟังก์ชันความคลาดเคลื่อน จากนั้น Gradient Descent จะปรับค่า weight ใหม่โดยลดลง เราจะทำซ้ำกระบวนการดังกล่าวไปเรื่อยๆ โดยการปรับค่า weight ใหม่ในแต่ละรอบ จนกว่าเราจะพบจุดต่ำสุด ซึ่งอาจจะเป็นคำตอบที่เหมาะสมที่สุดสำหรับโมเดลของเรา')
